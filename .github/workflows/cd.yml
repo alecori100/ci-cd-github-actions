@@ -31,7 +31,7 @@ jobs:
 
       - name: Agregar al host conocido
         run: |
-          ssh -i devops.pem ubuntu@ec2-54-145-24-29.compute-1.amazonaws.com >> ~/.ssh/known_hosts
+          ssh -o StrictHostKeyChecking=no ubuntu@ec2-54-145-24-29.compute-1.amazonaws.com "echo conectado"
 
       - name: Copiar archivos al EC2 con rsync
         run: |
